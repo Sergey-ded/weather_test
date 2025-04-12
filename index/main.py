@@ -1,11 +1,12 @@
-from utils import *
+from main_utils import *
 from var import *
-import requests
+from utils import BOT_TOKEN, CHAT_ID
 
-headers = {
-    'X-Yandex-Weather-Key': WEATHER_ACCESS_KEY
-}
 
-response = requests.post('https://api.weather.yandex.ru/graphql/query', headers=headers, json={'query': WEATHER_QUERY})
+# data = get_forcast_yandex(WEATHER_ACCESS_KEY, WEATHER_QUERY)
 
-print(response.json())
+data = read_from_json()
+
+write_to_db_src(data)
+
+send_telegram_notification(notif_message, BOT_TOKEN, CHAT_ID)
