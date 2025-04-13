@@ -172,4 +172,20 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-/index/data.json
+airflow-docker/dags/index/data.json
+
+__pycache__
+.idea/
+~*
+*.pyc
+airflow/.bash_history
+airflow/.python_history
+airflow/.odbc.ini
+docker-compose-local.yml
+airflow/dags/test_dag.py
+airflow/dags/test_dag.sql
+airflow/.cache/
+airflow/.ipython/
+airflow/.local/
+airflow/logs
+airflow/dags/billing/notebooks/.ipynb_checkpoints/
